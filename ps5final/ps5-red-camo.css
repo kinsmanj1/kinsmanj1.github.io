@@ -1,0 +1,265 @@
+/* BEGIN PS5 Controller Styling (custom red camo)
+   Keep all PNG/GIF files in the same folder as this CSS file. */
+
+.controller.ds4 {
+    background: url(Untitled-1.png) no-repeat;
+    background-size: 100% 100%; /* Untitled-1.png is 798x630, the controller box is 903x713 */
+    height: 713px;
+    width: 903px;
+    position: absolute;
+}
+
+.ds4.disconnected {
+    background: url(Disconnected.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.ds4.disconnected div {
+    display: none;
+}
+
+/* Triggers (Trigger.png: L2 at x=0, R2 at x=-120) */
+.ds4 .triggers {
+    position: absolute;
+    top: 0;
+    left: 113px;
+    width: 678px;
+    height: 107px;
+}
+
+.ds4 .trigger {
+    width: 117px;
+    height: 107px;
+    background: url(Trigger.png) no-repeat;
+    opacity: 0;
+}
+
+.ds4 .trigger.left {
+    float: left;
+}
+
+.ds4 .trigger.right {
+    float: right;
+    background-position: -120px 0;
+}
+
+/* Bumpers */
+.ds4 .bumpers {
+    position: absolute;
+    top: 116px;
+    left: 111px;
+    width: 681px;
+    height: 41px;
+}
+
+.ds4 .bumper {
+    width: 119px;
+    height: 41px;
+    background: url(Bumper.png) no-repeat;
+    opacity: 0;
+}
+
+.ds4 .bumper.pressed {
+    opacity: 1;
+}
+
+.ds4 .bumper.left {
+    float: left;
+}
+
+.ds4 .bumper.right {
+    float: right;
+    transform: rotateY(180deg);
+}
+
+/* Touchpad */
+.ds4 .touchpad {
+    position: absolute;
+    top: 123px;
+    left: 273px;
+    width: 359px;
+    height: 194px;
+}
+
+.ds4 .touchpad.pressed {
+    background: url(Touchpad.gif) no-repeat;
+}
+
+/* PS button: no pressed-state image was supplied, so this is a simple CSS glow.
+   Swap in your own image if you make one. */
+.ds4 .meta {
+    position: absolute;
+    left: 423px;
+    bottom: 288px;
+    width: 56px;
+    height: 44px;
+}
+
+.ds4 .meta.pressed {
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 70%);
+}
+
+/* Create / Options (Start.png is a single 25x41 image) */
+.ds4 .arrows {
+    position: absolute;
+    top: 167px;
+    left: 228px;
+    width: 448px;
+    height: 41px;
+}
+
+.ds4 .back,
+.ds4 .start {
+    width: 25px;
+    height: 41px;
+    background: url(Start.png) no-repeat;
+    opacity: 0;
+}
+
+.ds4 .back.pressed,
+.ds4 .start.pressed {
+    opacity: 1;
+}
+
+.ds4 .back {
+    float: left;
+}
+
+.ds4 .start {
+    float: right;
+    transform: rotateY(180deg);
+}
+
+/* Face buttons (Face.png: 58px cells, columns X O Square Triangle, row 2 = pressed) */
+.ds4 .abxy {
+    position: absolute;
+    top: 196px;
+    left: 642px;
+    width: 182px;
+    height: 182px;
+}
+
+.ds4 .button {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url(Face.png) no-repeat;
+}
+
+.ds4 .button.pressed {
+    background-position-y: -62px;
+}
+
+.ds4 .a { /* cross, bottom */
+    background-position: 0 0;
+    left: 62px;
+    top: 124px;
+}
+
+.ds4 .b { /* circle, right */
+    background-position: -62px 0;
+    left: 124px;
+    top: 62px;
+}
+
+.ds4 .x { /* square, left */
+    background-position: -124px 0;
+    left: 0;
+    top: 62px;
+}
+
+.ds4 .y { /* triangle, top */
+    background-position: -186px 0;
+    left: 62px;
+    top: 0;
+}
+
+.ds4 .a.pressed { background-position: 0 -62px; }
+.ds4 .b.pressed { background-position: -62px -62px; }
+.ds4 .x.pressed { background-position: -124px -62px; }
+.ds4 .y.pressed { background-position: -186px -62px; }
+
+/* Sticks (Stick.png: ring at 0, L3 at -110, R3 at -220) */
+.ds4 .sticks {
+    position: absolute;
+    top: 358px;
+    left: 254px;
+    width: 395px;
+    height: 106px;
+}
+
+.ds4 .stick {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    background: url(Stick.png) no-repeat;
+}
+
+.ds4 .stick.right {
+    left: 289px;
+}
+
+.ds4 .stick.pressed.left {
+    background-position-x: -110px;
+}
+
+.ds4 .stick.pressed.right {
+    background-position-x: -220px;
+}
+
+/* D-pad (Dpad.png: columns up, down, right, left; row 2 starts at y=73 = pressed) */
+.ds4 .dpad {
+    position: absolute;
+    top: 209px;
+    left: 93px;
+    width: 156px;
+    height: 156px;
+}
+
+.ds4 .face {
+    position: absolute;
+    background: url(Dpad.png) no-repeat;
+}
+
+.ds4 .face.up,
+.ds4 .face.down {
+    width: 58px;
+    height: 69px;
+}
+
+.ds4 .face.left,
+.ds4 .face.right {
+    width: 69px;
+    height: 58px;
+}
+
+.ds4 .face.up {
+    left: 49px;
+    top: 0;
+    background-position: 0 0;
+}
+
+.ds4 .face.down {
+    left: 49px;
+    top: 87px;
+    background-position: -62px 0;
+}
+
+.ds4 .face.right {
+    left: 87px;
+    top: 49px;
+    background-position: -124px 0;
+}
+
+.ds4 .face.left {
+    left: 0;
+    top: 49px;
+    background-position: -197px 0;
+}
+
+.ds4 .face.up.pressed    { background-position: 0 -73px; }
+.ds4 .face.down.pressed  { background-position: -62px -73px; }
+.ds4 .face.right.pressed { background-position: -124px -73px; }
+.ds4 .face.left.pressed  { background-position: -197px -73px; }
+
+/* END PS5 Controller Styling */
